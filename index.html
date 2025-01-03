@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
+
+<script>
+  function testSheetsAPI() {
+    const apiKey = 'MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC8tkqctaP98Vn5\nl46MvnmZXIJ5WBbFjMJhaRNdxTJHyyojT+TMXm0q5uL7tQnxxHhyvvGcCvuKyFqS\nW+C/F+nLT1Lsei6iEHCD3F0oKiZOXODvfiYNviO1aBNKYIIWmKGNUnldPoQPuvIK\nJoVmiqV/7Iq62ATVDjtT6SWVRovQF0pHGxQZZWRWYaLBp4/PlodweAcvnORkBKas\nJlZh15J99IhUH5qRYdo6jmxu1CWJu69Mr3G7N/FYnsNExb2AYemxxZfetmYBi4AX\n2PrrH7z6IcGkBuemV491FFaCEvPy1NDe3FFjUd9XfgnqEMYuxsq16N/wNzLnSj6N\nwyYHH4S/AgMBAAECggEACMDr9Rj34m+vnMRK+HxdZ5/C7Z4IcGF3Is2c+FyNWIc0\nDS9HjbNTnQnYvZRIQc67R5dT3ckkoetpSCC67CJP1f53+kAwqZPZpEQ0jghmfnwQ\ncwuG+Fw5i9CoFGslnaa217dbqdeciJ5DW/UtevQzeRuf08rxbnCaj+ngtGvxUFWv\nzJ+QqwkHXVmIQLKzg77KiUFf60AEvE7Hx5f6JRX5aOIfXH9V8Um1vpvsu6avqXz7\nUHj2X7aIgcVU/PxvtmffxVEWf/NwDvJ3c967tLTdA9hEyI2JfyNTWRZynimJ/JiE\nbLOSBN8AzXVF4OwJVgLzq/qw9HKNzq9xZxvCGjypAQKBgQDq7w+XFrU9LEu98DxF\nnghMB33tR1GTPkyph4zMXQxrtVqS7Zrd8cmoAFEiN1wOZmMCYi70LS/DHS43FaOf\nieU/x47kDCtcIDVseIr0bucnIkppCP3frsC6kWX8M9Nf3TVak9fQimJ4Fw5YHpxP\nruMgQQm9e3JEeGGCymD/Av3K+wKBgQDNojQjMQeHo0XtY1wdMAOZDFpW0r3YMYyH\nYplkiixJ6VCBpJtvxVmgAttTAqJA5E19+PZ7ehT2SnFTZkFicHVoIWIrppcqBCe6\nKZAVBEHfNw81gT1n6QkmCJUdSS65S06It3st8nL3t9cpMFim1RYM54kpQ/fxBgvB\n8sfG2R7CDQKBgQCg9XsD9B3mNIQMNRzGQbjDhlqDh9pe/E7/04vmtFV/MfhFNB9n\nsnGL9fOgcrdSclmhV21+A7t2fXadbOj2tD5pzSqcGa5XZwXTNF9Xiug6CqdagTuW\n1h7bdCSgf01xn5gfX618BmPijUFZpFdJzLN19LlcpcgrGyMLveZosT76owKBgBWG\nQQbd/vfHs24h1GaJvBatIFeuP4j9xsP1IjFP9UrXTUIExPByK+t/4Q1TXUCFpUbm\nZIaQRNly+WHNdlKjiuaXd/sxuOkA/leSOi64/1wqG0Fygcb6saZ1h4ZFPsrOgy30\nZsRseHRNngwFr4HnFCPNqKHVJ4LnKxvmGdtKptmRAoGAFBMOiMPvsaN0ychm1zwU\nt5rscfrBqj/LcNLxOnYgTTdnJDeN8oIpakScC1EyKY26j+0B88M1444nWT9l1fMT\nsdIMClzPwBGVqQuV2LIvW1WHiKFdHpVa+t7sTVCYTGbaGYKyO20qVPOb0JzTfLjP\n+cul26en961H3GwmMqNE2m0='; // Replace with your API key
+    const spreadsheetId = '1k_rPEifKD-CNFQRwFr2b_nb_k5Wfjmf2tmGUv5smtog'; // Replace with your spreadsheet ID
+    const sheetName = 'Sheet1'; // Replace with your sheet name
+
+    fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`)
+      .then(response => response.json())
+      .then(data => console.log(data.values))
+      .catch(error => console.error('Error:', error));
+  }
+</script>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<form>
+  <h1>Hello World</h1>
+  <p>I'm hosted with GitHub Pages.</p>
+  <form>
     <label for="fname">First name:</label><br>
     <input type="text" id="fname" name="fname" value="John"><br>
     <label for="lname">Last name:</label><br>
     <input type="text" id="lname" name="lname" value="Doe"><br><br>
     <input type="submit" value="Submit">
-</form>
+  </form>
 
 </body>
+
 </html>
