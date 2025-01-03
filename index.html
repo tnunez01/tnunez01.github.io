@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<link rel="stylesheet" href="style.css">
 <script>
   function getCheckedRadio(elementName) {
     var ele = document.getElementsByName(elementName);
@@ -46,11 +46,14 @@
   <h1>Hello World</h1>
 
   <form onsubmit="testDB()">
-    <label for="inputDate">Date: </label>
-    <input type="date" id="inputDate" value="2024-02-01"/><br><br>
-
-    <label for="inputName">Name: </label>
-    <input type="text" id="inputName" name="inputName"><br><br>
+    <label class="inputLabel">
+      <span>Date:</span> 
+      <input type="date" id="inputDate" value="2024-02-01"/><br><br>
+    </label>
+    <label class="inputLabel">
+      <span>Name:</span> 
+      <input type="text" id="inputName" name="inputName"><br><br>
+    </label>
 
     <b>Please select the currency:</b><br>
     <input type="radio" id="usd" name="currency" value="USD">
@@ -58,15 +61,18 @@
     <input type="radio" id="php" name="currency" value="PHP">
     <label for="php">PHP</label><br><br>
 
-    <label for="total">Total: </label>
-    <input type="text" id="total" name="total"><br><br>
-
-    <label for="fons">Alfonso: </label>
-    <input type="text" id="fons" name="fons"><br><br>
-
-    <label for="theo">Theo: </label>
-    <input type="text" id="theo" name="theo"><br><br>
-
+    <label class="inputLabel">
+      <span>Total:</span> 
+      <input type="text" id="total" name="total"><br><br>
+    </label>
+    <label class="inputLabel">
+      <span>Alfonso:</span>
+      <input type="text" id="fons" name="fons"><br><br>
+    </label>
+    <label class="inputLabel">
+      <span>Theo:</span>
+      <input type="text" id="theo" name="theo"><br><br>
+    </label>
     <b>Please select the type:</b><br>
     <input type="radio" id="cash" name="transaction" value="cash">
     <label for="cash">Cash</label><br>
@@ -75,9 +81,10 @@
     <input type="radio" id="gcash" name="transaction" value="gcash">
     <label for="gcash">GCash</label><br><br>
 
-    <label for="notes">Notes: </label>
-    <input type="text" id="notes" name="notes"><br><br>
-
+    <label class="inputLabel">
+      <span id="notesLabel">Notes:</span>
+      <input type="text" id="notes" name="notes"><br><br>
+    </label>
     <input type="submit" value="Submit">
   </form>
   

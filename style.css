@@ -2,20 +2,43 @@
 selectors). */
 body {
     margin: 25px;
-    background-color: rgb(240,240,240);
-    font-family: arial, sans-serif;
-    font-size: 14px;
-  }
-  
-  /* Applies to all <h1>...</h1> elements. */
-  h1 {
-    font-size: 35px;
-    font-weight: normal;
-    margin-top: 5px;
-  }
-  
-  /* Applies to all elements with <... class="someclass"> specified. */
-  /* .someclass { color: red; }
+    background-color: #8ecae6;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 18px;
+}
+
+.inputLabel {
+    display: block;
+}
+
+label span {
+    display: inline-block;
+    text-align: left;
+    width: 70px;
+}
+
+input[type=text], input[type=date] {
+    padding: 4px 6px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+#notesLabel {
+    vertical-align: top;
+}
+
+#notes {
+    height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: red;
+    }
+}
+
+/* Applies to all elements with <... class="someclass"> specified. */
+/* .someclass { color: red; }
   
   /* Applies to the element with <... id="someid"> specified. */
-  /* #someid { color: green; }
+/* #someid { color: green; }
