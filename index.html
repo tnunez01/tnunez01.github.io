@@ -12,6 +12,30 @@
       .then(data => console.log(data.values))
       .catch(error => console.error('Error:', error));
   }
+
+  function testDB() {
+    fetch('https://sheetdb.io/api/v1/58f61be4dda40', {
+        method:'GET', 
+        headers: {'Authorization': 'Bearer 3vx4f95w20c484k2v7tqiy5rous5l8557co9225o'}
+    })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+
+    fetch('https://sheetdb.io/api/v1/58f61be4dda40/id/3', {
+    method: 'PATCH',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        data: {
+            'name': "Emma"
+        }
+    })
+    })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+  }
 </script>
 
 <body>
@@ -27,7 +51,7 @@
     <input type="text" id="fons" name="fons"><br>
     <label for="theo">Theo:</label>
     <input type="text" id="theo" name="theo"><br>
-    <input type="submit" value="Submit" onclick="writeToSheet();">
+    <input type="submit" value="Submit" onclick="testDB();">
   </form>
 
 </body>
