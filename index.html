@@ -2,47 +2,85 @@
 <html>
 
 <script>
+  function getRadioValue() {
+    var ele = document.getElementsByName('currency');
+
+    for (i = 0; i < ele.length; i++) {
+      if (ele[i].checked)
+        document.getElementById("result").innerHTML
+          = "Gender: " + ele[i].value;
+    }
+  }
   function testDB() {
     const apiEndpoint = 'https://sheetdb.io/api/v1/v6v401vey4uq1'
     console.log("IN TEST DB")
 
+<<<<<<< Updated upstream
     var url = apiEndpoint + '/name/firstName'
+=======
+    var url = apiEndpoint + '/id/5'
+>>>>>>> Stashed changes
     fetch(url, {
-    method: 'PATCH',
-    headers: {
+      method: 'PATCH',
+      headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
+      },
+      body: JSON.stringify({
         data: {
-            'Date': "date",
-            'Name': "name",
-            'Currency' : "$",
-            'Total' : "100",
-            'Alfonso' : "50",
-            'Theo' : "50",
-            'Type' : "type",
-            'Notes' : "notes"
+          'Date': document.getElementById("inputDate").value,
+          'Name': document.getElementById("inputName").value,
+          'Currency': "currency",
+          'Total': document.getElementById("total").value,
+          'Alfonso': document.getElementById("fons").value,
+          'Theo': document.getElementById("theo").value,
+          'Type': "type",
+          'Notes': document.getElementById("notes").value
         }
+      })
     })
-    })
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+      .then((response) => response.json())
+      .then((data) => console.log(data));
   }
 </script>
 
 <body>
   <h1>Hello World</h1>
-  <p>I'm hosted with GitHub Pages.</p>
 
-  <form>
-    <label for="total">Total:</label>
-    <input type="text" id="total" name="total"><br>
-    <label for="fons">Alfonso:</label>
-    <input type="text" id="fons" name="fons"><br>
-    <label for="theo">Theo:</label>
-    <input type="text" id="theo" name="theo"><br>
-    <input type="submit" value="Submit" onclick="testDB();">
+  <form onsubmit="testDB()">
+    <label for="inputDate">Date: </label>
+    <input type="date" id="inputDate" value="2024-02-01"/><br><br>
+
+    <label for="inputName">Name: </label>
+    <input type="text" id="inputName" name="inputName"><br><br>
+
+    <b>Please select the currency:</b><br>
+    <input type="radio" id="usd" name="currency" value="USD">
+    <label for="usd">USD</label><br>
+    <input type="radio" id="php" name="currency" value="PHP">
+    <label for="php">PHP</label><br><br>
+
+    <label for="total">Total: </label>
+    <input type="text" id="total" name="total"><br><br>
+
+    <label for="fons">Alfonso: </label>
+    <input type="text" id="fons" name="fons"><br><br>
+
+    <label for="theo">Theo: </label>
+    <input type="text" id="theo" name="theo"><br><br>
+
+    <b>Please select the type:</b><br>
+    <input type="radio" id="cash" name="transaction" value="cash">
+    <label for="cash">Cash</label><br>
+    <input type="radio" id="card" name="transaction" value="card">
+    <label for="card">Card</label><br>
+    <input type="radio" id="gcash" name="transaction" value="gcash">
+    <label for="gcash">GCash</label><br><br>
+
+    <label for="notes">Notes: </label>
+    <input type="text" id="notes" name="notes"><br><br>
+
+    <input type="submit" value="Submit">
   </form>
   
 </body>
