@@ -2,17 +2,6 @@
 <html>
 
 <script>
-  function testSheetsAPI() {
-    const apiKey = 'AIzaSyD5txTjuD_VuJRazGSD9z5c6glQmFyHiT4'; // Replace with your API key
-    const spreadsheetId = '137PraRp0dKZTmUKx-uW018fz_AOxSR6l39mMCfqeHHo'; // Replace with your spreadsheet ID
-    const sheetName = 'Expenses'; // Replace with your sheet name
-
-    fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`)
-      .then(response => response.json())
-      .then(data => console.log(data.values))
-      .catch(error => console.error('Error:', error));
-  }
-
   function testDB() {
     const apiEndpoint = 'https://sheetdb.io/api/v1/v6v401vey4uq1'
     console.log("IN TEST DB")
@@ -26,7 +15,14 @@
     },
     body: JSON.stringify({
         data: {
-            'name': "Emma"
+            'Date': "date",
+            'Name': "name",
+            'Currency' : "$",
+            'Total' : "100",
+            'Alfonso' : "50",
+            'Theo' : "50",
+            'Type' : "type",
+            'Notes' : "notes"
         }
     })
     })
@@ -39,8 +35,6 @@
   <h1>Hello World</h1>
   <p>I'm hosted with GitHub Pages.</p>
 
-  <input id="clickMe" type="button" value="clickme" onclick="testSheetsAPI();" />
-
   <form>
     <label for="total">Total:</label>
     <input type="text" id="total" name="total"><br>
@@ -51,9 +45,6 @@
     <input type="submit" value="Submit" onclick="testDB();">
   </form>
   
-  
-  
-  <input id="clickMe" type="button" value="clickme" onclick="testDB();" />
 </body>
 
 </html>
