@@ -8,8 +8,8 @@
     for (i = 0; i < ele.length; i++) {
       if (ele[i].checked)
         return ele[i].value;
-        // document.getElementById("result").innerHTML
-        //   = "Gender: " + ele[i].value;
+      // document.getElementById("result").innerHTML
+      //   = "Gender: " + ele[i].value;
     }
   }
 
@@ -44,50 +44,51 @@
 
 <body>
   <h1>Hello World</h1>
+  <div class="flexbox-container">
+    <form onsubmit="testDB()">
+      <label class="inputLabel">
+        <span>Date:</span>
+        <input type="date" id="inputDate" value="2024-02-01" /><br><br>
+      </label>
+      <label class="inputLabel">
+        <span>Name:</span>
+        <input type="text" id="inputName" name="inputName"><br><br>
+      </label>
 
-  <form onsubmit="testDB()">
-    <label class="inputLabel">
-      <span>Date:</span> 
-      <input type="date" id="inputDate" value="2024-02-01"/><br><br>
-    </label>
-    <label class="inputLabel">
-      <span>Name:</span> 
-      <input type="text" id="inputName" name="inputName"><br><br>
-    </label>
+      <b>Select the currency:</b>
+          <input type="radio" id="usd" name="currency" value="USD">
+          <label for="usd">USD</label>
 
-    <b>Please select the currency:</b><br>
-    <input type="radio" id="usd" name="currency" value="USD">
-    <label for="usd">USD</label><br>
-    <input type="radio" id="php" name="currency" value="PHP">
-    <label for="php">PHP</label><br><br>
+          <input type="radio" id="php" name="currency" value="PHP">
+          <label for="php">PHP</label><br><br>
 
-    <label class="inputLabel">
-      <span>Total:</span> 
-      <input type="text" id="total" name="total"><br><br>
-    </label>
-    <label class="inputLabel">
-      <span>Alfonso:</span>
-      <input type="text" id="fons" name="fons"><br><br>
-    </label>
-    <label class="inputLabel">
-      <span>Theo:</span>
-      <input type="text" id="theo" name="theo"><br><br>
-    </label>
-    <b>Please select the type:</b><br>
-    <input type="radio" id="cash" name="transaction" value="cash">
-    <label for="cash">Cash</label><br>
-    <input type="radio" id="card" name="transaction" value="card">
-    <label for="card">Card</label><br>
-    <input type="radio" id="gcash" name="transaction" value="gcash">
-    <label for="gcash">GCash</label><br><br>
+      <label class="inputLabel">
+        <span>Total:</span>
+        <input type="text" id="total" name="total"><br><br>
+      </label>
+      <label class="inputLabel">
+        <span>Alfonso:</span>
+        <input type="text" id="fons" name="fons"><br><br>
+      </label>
+      <label class="inputLabel">
+        <span>Theo:</span>
+        <input type="text" id="theo" name="theo"><br><br>
+      </label>
+      <b>Please select the type:</b><br>
+      <input type="radio" id="cash" name="transaction" value="cash">
+      <label for="cash">Cash</label><br>
+      <input type="radio" id="card" name="transaction" value="card">
+      <label for="card">Card</label><br>
+      <input type="radio" id="gcash" name="transaction" value="gcash">
+      <label for="gcash">GCash</label><br><br>
 
-    <label class="inputLabel">
-      <span id="notesLabel">Notes:</span>
-      <input type="text" id="notes" name="notes"><br><br>
-    </label>
-    <input type="submit" value="Submit">
-  </form>
-  
+      <label class="inputLabel">
+        <span id="notesLabel">Notes:</span>
+        <input type="text" id="notes" name="notes"><br><br>
+      </label>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 </body>
 
 </html>
