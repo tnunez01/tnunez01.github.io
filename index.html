@@ -16,12 +16,6 @@
   function testDB() {
     const apiEndpoint = 'https://sheetdb.io/api/v1/v6v401vey4uq1'
     console.log("IN TEST DB")
-    fetch(apiEndpoint, {
-        method:'GET', 
-        headers: {'Authorization': 'Bearer 3vx4f95w20c484k2v7tqiy5rous5l8557co9225o'}
-    })
-    .then((response) => response.json())
-    .then((data) => console.log(data));
 
     var url = apiEndpoint + '/name/firstName'
     fetch(url, {
@@ -38,9 +32,6 @@
     })
     .then((response) => response.json())
     .then((data) => console.log(data));
-
-
-    
   }
 </script>
 
