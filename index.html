@@ -2,13 +2,14 @@
 <html>
 
 <script>
-  function getRadioValue() {
-    var ele = document.getElementsByName('currency');
+  function getCheckedRadio(elementName) {
+    var ele = document.getElementsByName(elementName);
 
     for (i = 0; i < ele.length; i++) {
       if (ele[i].checked)
-        document.getElementById("result").innerHTML
-          = "Gender: " + ele[i].value;
+        return ele[i].value;
+        // document.getElementById("result").innerHTML
+        //   = "Gender: " + ele[i].value;
     }
   }
 
@@ -27,11 +28,11 @@
         data: {
           'Date': document.getElementById("inputDate").value,
           'Name': document.getElementById("inputName").value,
-          'Currency': "currency",
+          'Currency': getCheckedRadio("currency"),
           'Total': document.getElementById("total").value,
           'Alfonso': document.getElementById("fons").value,
           'Theo': document.getElementById("theo").value,
-          'Type': "type",
+          'Type': getCheckedRadio("transaction"),
           'Notes': document.getElementById("notes").value
         }
       })
