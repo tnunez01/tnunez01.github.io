@@ -23,29 +23,24 @@
     .then((response) => response.json())
     .then((data) => console.log(data));
 
-    // Sort results by id in descending order, take two
-    // and return the age as an integer.
+    var url = apiEndpoint + '/name/firstName'
+    fetch(url, {
+    method: 'PATCH',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        data: {
+            'name': "Emma"
+        }
+    })
+    })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 
-    var url = apiEndpoint + 'sheet=Expenses'
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => console.log(data));
 
-
-    // fetch('https://sheetdb.io/api/v1/58f61be4dda40/id/3', {
-    // method: 'PATCH',
-    // headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json'
-    // },
-    // body: JSON.stringify({
-    //     data: {
-    //         'name': "Emma"
-    //     }
-    // })
-    // })
-    // .then((response) => response.json())
-    // .then((data) => console.log(data));
+    
   }
 </script>
 
