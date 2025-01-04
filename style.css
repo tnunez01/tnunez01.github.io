@@ -4,7 +4,7 @@ body {
     margin: 25px;
     background-color: green;
     font-family: helvetica, arial, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .inputLabel {
@@ -14,14 +14,14 @@ body {
 label span {
     display: inline-block;
     text-align: left;
-    width: 120px;
+    width: 100px;
 }
 
 input[type=text], input[type=date] {
     padding: 10px 10px;
     border: 1px solid;
     border-radius: 4px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 [type="radio"] {
@@ -31,7 +31,7 @@ input[type=text], input[type=date] {
 }
 
 [type="submit"] {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 #notesLabel {
@@ -44,7 +44,7 @@ input[type=text], input[type=date] {
 
 @media (min-width:320px) {
     body {
-        margin: 25px 0px 25px 25px;
+        margin: 25px 25px 25px 25px;
         background-color: #8ecae6;
     }
 
