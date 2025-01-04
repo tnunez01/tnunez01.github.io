@@ -36,7 +36,7 @@ input[type=text], input[type=date] {
     height: 50px;
 }
 
-@media all and (max-width: 300px) {
+@media (min-width:320px) {
     body {
         margin: 25px 0px 25px 25px;
         background-color: #8ecae6;
