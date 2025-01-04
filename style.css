@@ -25,6 +25,7 @@ input[type=text], input[type=date] {
 }
 
 [type="radio"] {
+    margin-top: 24px;
     width: 18px;
     height: 18px;
 }
