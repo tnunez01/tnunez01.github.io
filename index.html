@@ -9,7 +9,6 @@
 
     for (i = 0; i < ele.length; i++) {
       if (ele[i].checked)
-      console.log(ele[i].value)
         return ele[i].value;
       // document.getElementById("result").innerHTML
       //   = "Gender: " + ele[i].value;
@@ -18,7 +17,6 @@
 
   function testDB() {
     const apiEndpoint = 'https://sheetdb.io/api/v1/v6v401vey4uq1'
-    console.log("IN TEST DB")
 
     var url = apiEndpoint + '/id/5'
     fetch(url, {
@@ -77,11 +75,11 @@
       <input type="text" id="theo" name="theo"><br><br>
     </label>
     <b>Please select the type:</b><br>
-    <input type="radio" id="cash" name="transaction" value="cash">
+    <input type="radio" id="cash" name="transaction" value="Cash">
     <label for="cash">Cash</label>
-    <input type="radio" id="card" name="transaction" value="card">
+    <input type="radio" id="card" name="transaction" value="Card">
     <label for="card">Card</label>
-    <input type="radio" id="gcash" name="transaction" value="gcash">
+    <input type="radio" id="gcash" name="transaction" value="GCash">
     <label for="gcash">GCash</label><br><br>
 
     <label class="inputLabel">
