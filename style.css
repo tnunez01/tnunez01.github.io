@@ -2,7 +2,7 @@
 selectors). */
 body {
     margin: 25px;
-    background-color: #8ecae6;
+    background-color: green;
     font-family: helvetica, arial, sans-serif;
     font-size: 20px;
 }
@@ -39,7 +39,7 @@ input[type=text], input[type=date] {
 @media all and (max-width: 300px) {
     body {
         margin: 25px 0px 25px 25px;
-        background-color: green;
+        background-color: #8ecae6;
     }
 
     input[type=text], input[type=date] {
