@@ -36,7 +36,7 @@ input[type=text], input[type=date] {
     height: 50px;
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 1000px) {
     body {
         margin: 25px 0px 25px 25px;
         background-color: green;
